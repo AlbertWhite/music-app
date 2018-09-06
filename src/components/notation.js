@@ -1,3 +1,5 @@
 import React from 'react'
 
-export default (Notation = () => <div>Notation</div>)
+const Notation = () => <div>Notation</div>
+
+export default Notation

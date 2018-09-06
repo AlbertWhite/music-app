@@ -1,8 +1,8 @@
-import { combineReducer } from 'redux'
+import { combineReducers } from 'redux'
 import controllerReducer from './controller'
 import noteReducer from './note'
 
-export default combineReducer({
+export default combineReducers({
   controller: controllerReducer,
   note: noteReducer
 })

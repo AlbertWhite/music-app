@@ -1,9 +1,11 @@
 import { connect } from 'react-redux'
-import NoteBoard from '../components/noteboard'
+import NoteBoard from '../components/noteboard/noteboard'
 
 const mapDispatchToProps = dispatch => ({})
 
-const mapStateToProps = state => ({})
+const mapStateToProps = state => ({
+  meter: state.controller.meter
+})
 
 const NoteBoardContainer = connect(
   mapStateToProps,
