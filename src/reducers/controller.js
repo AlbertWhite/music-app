@@ -9,7 +9,11 @@ const initialState = {
 
 const controllerReducer = (state = initialState, action) => {
   switch (action.type) {
+    case 'INIT_STATE':
+      return initialState //it is not necessary
     default:
       return state
   }
 }
+
+export default controllerReducer

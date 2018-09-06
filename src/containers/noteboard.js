@@ -3,9 +3,11 @@ import NoteBoard from '../components/noteboard/noteboard'
 
 const mapDispatchToProps = dispatch => ({})
 
-const mapStateToProps = state => ({
-  meter: state.controller.meter
-})
+const mapStateToProps = state => {
+  return {
+    meter: state.controller.meter
+  }
+}
 
 const NoteBoardContainer = connect(
   mapStateToProps,
