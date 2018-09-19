@@ -1,0 +1,13 @@
+.bar{
+  display: inline-block;
+}
+
+.column{
+  display: inline-block;
+}
+
+.meter{
+  width: 20px;
+  height: 20px;
+  border: 0.5px solid black;
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import Bar from './bar'
 import { BAR_NUMBER } from '../../constants/config'
+import './noteboard.css'
 
 const NoteBoard = props => {
   let BarList = []

@@ -1,19 +1,13 @@
 import React from 'react'
-import Meter from './meter'
-import { NOTE_NUMBER } from '../../constants/config'
+import Column from './column'
 
 const Bar = ({ meter }) => {
-  const column = []
-  for (let i = 0; i < NOTE_NUMBER; i++) {
-    column.push(Meter)
-  }
-
-  const columnList = []
+  let columnList = []
   for (let i = 0; i < meter; i++) {
-    columnList.push(column)
+    columnList.push(<Column />)
   }
 
-  return columnList
+  return <div className="bar">{columnList}</div>
 }
 
 export default Bar
