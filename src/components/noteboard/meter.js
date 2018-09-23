@@ -1,13 +1,15 @@
-import React from 'react'
-import Tone from 'tone/build/Tone.min.js'
+import React from "react"
+import Tone from "tone/build/Tone.min.js"
 
-const triggerSound = () => {
+const triggerSound = (note, key) => {
   var synth = new Tone.Synth().toMaster()
-  synth.triggerAttackRelease('D4', '4n')
+  synth.triggerAttackRelease(`${note}${key}`, "4n")
 }
 
-const Meter = () => {
-  return <div className="meter" onClick={triggerSound} />
+const Meter = ({ musicNote, musicKey }) => {
+  return (
+    <div className="meter" onClick={() => triggerSound(musicNote, musicKey)} />
+  )
 }
 
 export default Meter

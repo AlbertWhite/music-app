@@ -1,13 +1,20 @@
-.bar{
+.noteboard__container {
+  height: 80%;
+  overflow-y: scroll;
+}
+
+.bar {
+  display: inline-block;
+  border-right: 1px solid #2fa394;
+}
+
+.column {
   display: inline-block;
 }
 
-.column{
-  display: inline-block;
-}
-
-.meter{
-  width: 20px;
-  height: 20px;
-  border: 0.5px solid black;
+.meter {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: 0.5px solid #ccf2ed;
 }
