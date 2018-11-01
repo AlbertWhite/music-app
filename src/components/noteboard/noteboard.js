@@ -1,16 +1,24 @@
 import React from "react"
-import Bar from "./bar"
+import Columns from "./columns"
 import { BAR_NUMBER } from "../../constants/config"
 import "./noteboard.css"
 
 const NoteBoard = props => {
-  let BarList = []
-
+  let columns = []
   for (let i = 0; i < BAR_NUMBER; i++) {
-    BarList.push(<Bar meter={props.meter} />)
+    const columnsNotesSelected = props.notesSelected[i]
+      ? props.notesSelected[i]
+      : false
+    columns.push(
+      <Columns
+        {...props}
+        meterIndex={i}
+        columnsNotesSelected={columnsNotesSelected}
+      />
+    )
   }
 
-  return <div className="noteboard__container">{BarList}</div>
+  return <div className="noteboard__container">{columns}</div>
 }
 
 export default NoteBoard

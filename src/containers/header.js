@@ -1,9 +1,11 @@
-import { connect } from 'react-redux'
-import Header from '../components/header'
+import { connect } from "react-redux"
+import Header from "../components/header"
 
 const mapDispatchToProps = dispatch => ({})
 
-const mapStateToProps = state => ({})
+const mapStateToProps = state => ({
+  notesSelected: state.note.notesSelected
+})
 
 const HeaderContainer = connect(
   mapStateToProps,

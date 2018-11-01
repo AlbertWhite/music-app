@@ -1,8 +1,8 @@
 import React from "react"
-import Meter from "./meter"
+import Block from "./block"
 import { NOTE_NUMBER } from "../../constants/config"
 
-const Column = () => {
+const Column = ({ blockIndex, meterIndex, updateNote, columnNoteSelected }) => {
   const column = []
 
   let key = 3
@@ -32,7 +32,18 @@ const Column = () => {
         note = "B"
         break
     }
-    column.push(<Meter musicNote={note} musicKey={key} />)
+
+    column.push(
+      <Block
+        note={note}
+        musicKey={key}
+        meterIndex={meterIndex}
+        blockIndex={blockIndex}
+        updateNote={updateNote}
+        currentNote={columnNoteSelected.note}
+        currentKey={columnNoteSelected.key}
+      />
+    )
   }
 
   return <div className="column">{column}</div>
