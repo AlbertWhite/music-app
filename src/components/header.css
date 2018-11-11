@@ -5,7 +5,7 @@
   margin-bottom: 20px;
 }
 
-.header__container input {
+.header__name {
   border: none;
   background: none;
   font-size: 25px;
@@ -17,7 +17,7 @@
   letter-spacing: 1.5px;
 }
 
-.header__container input:focus {
+.header__name:focus {
   outline: none;
 }
 
@@ -30,6 +30,7 @@
   top: 0px;
   background-color: #2fa394;
   color: white;
+  cursor: pointer;
 }
 
 .header__button img {
@@ -42,7 +43,7 @@
 .header__meter-selector {
   position: absolute;
   right: 150px;
-  top: 23px;
+  top: 20px;
 }
 
 .header__meter-selector span {
@@ -57,4 +58,33 @@
 
 .header__meter-text--selected {
   font-weight: 400;
+}
+
+.header__bpm {
+  position: absolute;
+  right: 330px;
+  top: 22px;
+}
+
+.header__bpm-input {
+  display: inline-block;
+  border: none;
+  background: none;
+  font-size: 25px;
+  position: absolute;
+  left: 0px;
+  top: -3px;
+  color: #47a393;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+}
+
+.header__bpm-text {
+  position: absolute;
+  left: 48px;
+  font-weight: 200;
+}
+
+.header__bpm-input:focus {
+  outline: none;
 }

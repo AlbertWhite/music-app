@@ -1,6 +1,6 @@
 const initialState = {
-  meter: 3,
-  bpm: 60,
+  meter: 4,
+  bpm: 180,
   key: {
     level: "c",
     majorMinor: "major"
@@ -15,6 +15,11 @@ const controllerReducer = (state = initialState, action) => {
       return {
         ...state,
         meter: action.meter
+      }
+    case "UPDATE_BPM":
+      return {
+        ...state,
+        bpm: action.bpm
       }
     default:
       return state

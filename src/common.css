@@ -1,6 +1,6 @@
 html {
   height: 100%;
-  width: 3200px;
+  width: 100%;
 }
 
 body {
@@ -10,4 +10,5 @@ body {
 
 #root {
   height: 100%;
+  width: 100%;
 }

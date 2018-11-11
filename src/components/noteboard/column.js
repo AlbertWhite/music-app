@@ -36,6 +36,7 @@ const Column = ({ blockIndex, meterIndex, updateNote, columnNoteSelected }) => {
     column.push(
       <Block
         isCNote={note === "C"}
+        isBNote={note === "B"}
         note={note}
         musicKey={key}
         meterIndex={meterIndex}

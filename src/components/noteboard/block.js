@@ -21,6 +21,7 @@ class Block extends Component {
   render() {
     const {
       isCNote,
+      isBNote,
       note, //current note
       musicKey, //current key
       meterIndex, //current index of column (meter)
@@ -38,6 +39,10 @@ class Block extends Component {
 
     if (isCNote) {
       classNames += " block--border-bottom"
+    }
+
+    if (isBNote) {
+      classNames += " block--border-top"
     }
 
     return (
