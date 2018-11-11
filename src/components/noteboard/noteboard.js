@@ -1,24 +1,30 @@
-import React from "react"
+import React, { Component } from "react"
 import Columns from "./columns"
 import { BAR_NUMBER } from "../../constants/config"
 import "./noteboard.css"
 
-const NoteBoard = props => {
-  let columns = []
-  for (let i = 0; i < BAR_NUMBER; i++) {
-    const columnsNotesSelected = props.notesSelected[i]
-      ? props.notesSelected[i]
-      : false
-    columns.push(
-      <Columns
-        {...props}
-        meterIndex={i}
-        columnsNotesSelected={columnsNotesSelected}
-      />
-    )
+class NoteBoard extends Component {
+  componentDidMount() {
+    document.getElementsByClassName("noteboard__container")[0].scrollTop = 300
   }
 
-  return <div className="noteboard__container">{columns}</div>
+  render() {
+    let columns = []
+    for (let i = 0; i < BAR_NUMBER; i++) {
+      const columnsNotesSelected = this.props.notesSelected[i]
+        ? this.props.notesSelected[i]
+        : false
+      columns.push(
+        <Columns
+          {...this.props}
+          meterIndex={i}
+          columnsNotesSelected={columnsNotesSelected}
+        />
+      )
+    }
+
+    return <div className="noteboard__container">{columns}</div>
+  }
 }
 
 export default NoteBoard

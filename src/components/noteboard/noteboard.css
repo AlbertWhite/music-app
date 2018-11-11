@@ -17,8 +17,28 @@
   height: 50px;
   cursor: pointer;
   border: 0.5px solid #ccf2ed;
+  text-align: center;
 }
 
 .block--selected {
   background-color: #2fa394;
+}
+
+.block--border-bottom {
+  border-bottom: 1px solid #2fa394;
+}
+
+.block-note {
+  color: #2fa394;
+  vertical-align: middle;
+  height: 100%;
+  line-height: 100%;
+  padding-top: 18px;
+  font-size: 15px;
+  opacity: 0.5;
+}
+
+.block--selected .block-note {
+  color: white;
+  opacity: 1;
 }

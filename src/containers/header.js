@@ -1,10 +1,15 @@
 import { connect } from "react-redux"
 import Header from "../components/header"
-
-const mapDispatchToProps = dispatch => ({})
+import { updateMeter } from "../actions/action"
+const mapDispatchToProps = dispatch => ({
+  updateMeter: meter => {
+    dispatch(updateMeter({ meter }))
+  }
+})
 
 const mapStateToProps = state => ({
-  notesSelected: state.note.notesSelected
+  notesSelected: state.note.notesSelected,
+  meter: state.controller.meter
 })
 
 const HeaderContainer = connect(

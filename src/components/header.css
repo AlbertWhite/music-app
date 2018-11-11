@@ -1,0 +1,60 @@
+.header__container {
+  height: 70px;
+  color: #47a394;
+  background-color: #f7fefe;
+  margin-bottom: 20px;
+}
+
+.header__container input {
+  border: none;
+  background: none;
+  font-size: 25px;
+  position: absolute;
+  left: 24px;
+  top: 17px;
+  color: #47a394;
+  font-weight: 200;
+  letter-spacing: 1.5px;
+}
+
+.header__container input:focus {
+  outline: none;
+}
+
+.header__button {
+  position: absolute;
+  text-align: center;
+  width: 80px;
+  height: 70px;
+  right: 0px;
+  top: 0px;
+  background-color: #2fa394;
+  color: white;
+}
+
+.header__button img {
+  height: 30px;
+  width: 30px;
+  padding-top: 18px;
+  padding-left: 10px;
+}
+
+.header__meter-selector {
+  position: absolute;
+  right: 150px;
+  top: 23px;
+}
+
+.header__meter-selector span {
+  font-size: 23px;
+}
+
+.header__meter-text {
+  font-weight: lighter;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.header__meter-text--selected {
+  font-weight: 400;
+}

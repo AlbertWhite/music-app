@@ -20,6 +20,7 @@ class Block extends Component {
 
   render() {
     const {
+      isCNote,
       note, //current note
       musicKey, //current key
       meterIndex, //current index of column (meter)
@@ -30,14 +31,24 @@ class Block extends Component {
     } = this.props
 
     const isCurrentNote = currentNote === note && currentKey === musicKey
-    const classNames = isCurrentNote ? "block block--selected" : "block"
+    let classNames = "block"
+    if (isCurrentNote) {
+      classNames += " block--selected"
+    }
+
+    if (isCNote) {
+      classNames += " block--border-bottom"
+    }
+
     return (
       <div
         className={classNames}
         onClick={() =>
           this.triggerSound(note, musicKey, meterIndex, blockIndex)
         }
-      />
+      >
+        <div className="block-note">{note}</div>
+      </div>
     )
   }
 }
